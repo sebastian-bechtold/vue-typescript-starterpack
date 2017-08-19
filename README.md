@@ -2,6 +2,17 @@
 A minimal example of integrating TypeScript and Vue.js using Webpack 2
 
 
+## Ultra-quick start if you're super-impatient regarding configuration chores
+If you just want to get a Typescript+Vue.js project up and running as fast as possible and don't feel the need to understand the individual steps, simply do the following (assuming that you already have *git* and *npm* installed on your system):
+
+    git init
+    git remote add origin https://github.com/sebastian-bechtold/vuejs-typescript-webpack2-sample.git
+    git pull origin master
+    npm install
+    npm run dev
+    
+
+
 ## Setting up a npm project:
 
     npm init -y
