@@ -30,7 +30,7 @@ Afterwards, your package.json should look like this:
 
 ## Installing required packages:
 
-npm install webpack webpack-dev-server css-loader typescript ts-loader vue vue-loader vue-class-component vue-template-compiler
+    npm install webpack webpack-dev-server css-loader typescript ts-loader vue vue-loader vue-class-component vue-template-compiler
 
 ## Setting up Webpack:
 
