@@ -40,8 +40,8 @@ Afterwards, your package.json should look like this:
     }
 
 ## Installing required packages:
-
-    npm install webpack webpack-dev-server css-loader sass-loader typescript ts-loader vue vue-loader vue-class-component vue-template-compiler
+    
+    npm install css-loader node-sass sass-loader ts-loader typescript vue vue-class-component vue-loader vue-template-compiler webpack webpack-dev-server
 
 ## Setting up Webpack:
 
