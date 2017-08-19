@@ -216,5 +216,8 @@ src/components/App.vue:
 ## Finally, start up the dev server:
     npm run dev
     
-Now open the web browser of your choice and navigate to `http://localhost:8080`
+Now open the web browser of your choice and navigate to `http://localhost:8080`. If everything is set up correctly, you should see something like this:
+
+![Screenshot](https://raw.githubusercontent.com/sebastian-bechtold/vuejs-typescript-webpack2-sample/master/hello-world.png "Sample Project Screenshot")
+
 
