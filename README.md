@@ -152,8 +152,8 @@ webpack.config.js:
 
 # Creating src folder and initial sample files:
 
-mkdir src
-mkdir src/components
+    mkdir src
+    mkdir src/components
 
 
 
@@ -227,4 +227,8 @@ src/components/App.vue:
     }
     </style>
 
+## Finally, start up the dev server:
+    npm run dev
+    
+Now open the web browser of your choice and navigate to `http://localhost:8080`
 
