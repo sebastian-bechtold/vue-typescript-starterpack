@@ -4,8 +4,9 @@ A minimal example of integrating TypeScript and Vue.js using Webpack 2
 
 ## Setting up a npm project:
 
-npm init -y
+    npm init -y
 
+This command will create a file named 'package.json' in your project folder. package.json is the central configuration and "housekeeping" file of npm.
 
 Open your newly created package.json with your text editor and add the following property to the "scripts" section:
 
@@ -27,17 +28,11 @@ Afterwards, your package.json should look like this:
       "license": "ISC"
     }
 
-
-
-
-
-# Installing required packages:
+## Installing required packages:
 
 npm install webpack webpack-dev-server css-loader typescript ts-loader vue vue-loader vue-class-component vue-template-compiler
 
-
-# Setting up Webpack:
-
+## Setting up Webpack:
 
 webpack.config.js:
 
@@ -121,7 +116,9 @@ webpack.config.js:
     }
 
 
-# Setting up TypeScript:
+## Setting up TypeScript:
+
+tsconfig.json:
 
     {
       "compilerOptions": {
@@ -150,14 +147,10 @@ webpack.config.js:
     }
 
 
-# Creating src folder and initial sample files:
+## Creating src folder and initial sample files:
 
     mkdir src
     mkdir src/components
-
-
-
-
 
 index.html:
 
@@ -168,10 +161,7 @@ index.html:
     </body>
     <script src="./dist/build.js"></script>
     </html>
-
-
-
-
+    
 src/index.ts:
 
     import Vue from 'vue'
@@ -185,16 +175,12 @@ src/index.ts:
     })
 
 
-
-
 src/vue-shim.d.ts:
 
     declare module "*.vue" {
         import Vue from "vue";
         export default Vue;
     }
-
-
 
 src/components/App.vue:
 
