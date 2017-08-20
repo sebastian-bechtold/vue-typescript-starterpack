@@ -19,7 +19,7 @@ When I decided to start using Vue.js, it was clear for me from the first moment 
 
 After many hours of googleing, reading, trial and error, I finally had a working project up and running. I'm sharing this project here with you in the hope to save you these hours if you're in a similar situation.
 
-The instructions and sample code provided here worked on my system as of 2017-08-20 with the latest versions of the involved packages avialable on npm at this time. Since this might not mean much in the crazily fast-moving world of front-end web development - good luck ;).
+The instructions and sample code provided here worked on my system as of 2017-08-20 with the latest versions of the involved packages avialable on npm at this time. Since this might not mean much in the crazily fast-moving world of front-end web development - good luck!
 
 
 ## Set up a npm project:
