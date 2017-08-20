@@ -26,7 +26,9 @@ The instructions and sample code provided here worked on my system as of 2017-08
 
     npm init -y
 
-This command will create a file named 'package.json' in your project folder. package.json is the central configuration and "housekeeping" file of npm. Open your newly created package.json with your text editor and add the following property to the "scripts" section:
+This command will create a file named 'package.json' in your project folder. package.json is the central configuration and "housekeeping" file of npm, the Node Package Manager. We'll use npm to download and manage all software packages required by this project.
+
+Open your newly created package.json with your text editor and add the following property to the "scripts" section:
 
     "dev" : "webpack-dev-server"
 
