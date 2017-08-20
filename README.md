@@ -65,7 +65,7 @@ Let's take a closer look at what we're downloading here:
 - *css-loader*, *sass-loader*, *ts-loader* and *vue-loader*: These are plug-ins for Webpack that enable Webpack to compile CSS, SCSS/SASS, TypeScript and Vue component source files into a project.
 - *webpack-dev-server*: A small web server that can be launched from the command line and makes your project accessible via http for development purposes. What makes it extremely helopful is that it automatically rebuilds and reloads you app when a source file has changed.
 
-## Setting up Webpack:
+## Set up Webpack:
 
 webpack.config.js:
 
@@ -149,7 +149,7 @@ webpack.config.js:
     }
 
 
-## Setting up TypeScript:
+## Set up TypeScript:
 
 tsconfig.json:
 
@@ -180,7 +180,7 @@ tsconfig.json:
     }
 
 
-## Creating src folder and initial sample files:
+## Create source folder and initial sample files:
 
     mkdir src
     mkdir src/components
