@@ -255,6 +255,7 @@ Now open the web browser of your choice and navigate to `http://localhost:8080`.
 
 ![Screenshot](https://raw.githubusercontent.com/sebastian-bechtold/vuejs-typescript-webpack2-sample/master/hello-world.png "Sample Project Screenshot")
 
+## Create permanent build files
 Note that the dev server works with a temporary build that is not stored on your disk. In order to produce permanent build files for deployment or use with another web server, use the following comand:
 
     npm run build
