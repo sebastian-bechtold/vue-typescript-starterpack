@@ -57,7 +57,7 @@ Let's take a closer look at what we're installing here:
 - *vue-class-component*: A TypeScript extension that allows you to write Vue.js components as TypeScript classes. Not absolutely necessary to combine TypeScript with Vue, but **HIGHLY** recommended for *much* cleaner and TypeScript-idiomatic code structure.
 - *vue-template-compiler*: A module to compile Vue.js templates to JavaScript.
 - *node-sass*: A module to compile SASS code (enhanced CSS) to browser-readable "classic" CSS.
-- *webpack*: A build tool that compiled different types of source files into something that can be run by the browser.
+- *webpack*: A build tool that compiles different types of source files into something that can be run by the browser.
 - *css-loader*, *sass-loader*, *ts-loader* and *vue-loader*: These are plug-ins for Webpack that enable Webpack to compile CSS, SCSS/SASS, TypeScript and Vue component source files into a project.
 - *webpack-dev-server*: A small web server that can be launched from the command line and makes your project accessible via http for development purposes. What makes it extremely helopful is that it automatically rebuilds and reloads you app when a source file has changed.
 
