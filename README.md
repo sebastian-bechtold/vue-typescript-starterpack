@@ -32,7 +32,7 @@ Open your newly created package.json with your text editor and add the following
 
     "dev" : "webpack-dev-server"
     
-This little line will later enable you to start the development server from your command line by typing 'npm run dev' in your project directory.
+This little line will later enable you to start the development server from your command line by typing `npm run dev` in your project directory.
 
 Now, your package.json should look like this:
 
@@ -67,7 +67,7 @@ Let's take a closer look at what we're downloading here:
 
 ## Set up Webpack:
 
-webpack.config.js:
+In your project root directory, create a file named `webpack.config.js` with the following content. This will be your Webpack configuration file:
 
     var path = require('path')
     var webpack = require('webpack')
@@ -151,7 +151,7 @@ webpack.config.js:
 
 ## Set up TypeScript:
 
-tsconfig.json:
+In your project root directory, create a file named `tsconfig.json` with the following content. This will be the configuration file for the TypeScript compiler:
 
     {
       "compilerOptions": {
@@ -185,7 +185,7 @@ tsconfig.json:
     mkdir src
     mkdir src/components
 
-index.html:
+### index.html:
 
     <!doctype html>
     <html>
@@ -195,7 +195,7 @@ index.html:
     <script src="./dist/build.js"></script>
     </html>
     
-src/index.ts:
+### src/index.ts:
 
     import Vue from 'vue'
     import App from './components/App.vue'
@@ -208,14 +208,14 @@ src/index.ts:
     })
 
 
-src/vue-shim.d.ts:
+### src/vue-shim.d.ts:
 
     declare module "*.vue" {
         import Vue from "vue";
         export default Vue;
     }
 
-src/components/App.vue:
+### src/components/App.vue:
 
     <template>
       <div class="app">
