@@ -1,10 +1,10 @@
 
 <template>
   <div class="app">
-    <p>The message: <input v-model="msg"/></p>
+    <p>The message: <input v-model="message"/></p>
     
     <p>TypeScript and Vue say:</p>
-    <h1>{{msg}}</h1>
+    <h1>{{message}}</h1>
   </div>
 </template>
 
@@ -18,7 +18,13 @@ import Component from 'vue-class-component'
   }
 })
 export default class App extends Vue {
-  msg: string;
+
+  msg : string;
+  message: string = "";
+
+  mounted() {
+    this.message = this.msg;
+  }
 }
 </script>
 
