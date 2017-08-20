@@ -26,9 +26,7 @@ The instructions and sample code provided here worked on my system as of 2017-08
 
     npm init -y
 
-This command will create a file named 'package.json' in your project folder. package.json is the central configuration and "housekeeping" file of npm.
-
-Open your newly created package.json with your text editor and add the following property to the "scripts" section:
+This command will create a file named 'package.json' in your project folder. package.json is the central configuration and "housekeeping" file of npm. Open your newly created package.json with your text editor and add the following property to the "scripts" section:
 
     "dev" : "webpack-dev-server"
 
@@ -51,6 +49,13 @@ Afterwards, your package.json should look like this:
 ## Installing required packages:
     
     npm install css-loader node-sass sass-loader ts-loader typescript vue vue-class-component vue-loader vue-template-compiler webpack webpack-dev-server
+
+Let's take a closer look at what we're installing here:
+
+- bla:
+  This is a test
+- bli
+- blubb
 
 ## Setting up Webpack:
 
