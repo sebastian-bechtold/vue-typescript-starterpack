@@ -210,6 +210,8 @@ In your project root directory, create a file named `tsconfig.json` with the fol
 
 ### src/vue-shim.d.ts:
 
+This little file is critical! Without it, you won't be able to `import` Vue component files (.vue) in your TypeScript code.
+
     declare module "*.vue" {
         import Vue from "vue";
         export default Vue;
