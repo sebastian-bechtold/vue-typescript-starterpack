@@ -31,8 +31,10 @@ This command will create a file named 'package.json' in your project folder. pac
 Open your newly created package.json with your text editor and add the following property to the "scripts" section:
 
     "dev" : "webpack-dev-server"
+    
+This little line will later enable you to start the development server from your command line by typing 'npm run dev' in your project directory.
 
-Afterwards, your package.json should look like this:
+Now, your package.json should look like this:
 
     {
       "name": "vue-ts-sample",
@@ -48,11 +50,11 @@ Afterwards, your package.json should look like this:
       "license": "ISC"
     }
 
-## Installing required packages:
+## Install required packages using npm:
     
     npm install css-loader node-sass sass-loader ts-loader typescript vue vue-class-component vue-loader vue-template-compiler webpack webpack-dev-server
     
-Let's take a closer look at what we're installing here:
+Let's take a closer look at what we're downloading here:
 
 - *typescript*: The TypeScript compiler.
 - *vue*: The Vue.js library.
