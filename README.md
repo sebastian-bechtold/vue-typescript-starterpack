@@ -28,11 +28,12 @@ The instructions and sample code provided here worked on my system as of 2017-08
 
 This command will create a file named 'package.json' in your project folder. package.json is the central configuration and "housekeeping" file of npm, the Node Package Manager. We'll use npm to download and manage all software packages required by this project.
 
-Open your newly created package.json with your text editor and add the following property to the "scripts" section:
+Open your newly created package.json with your text editor and add the following properties to the "scripts" section:
 
+    "build": "webpack",
     "dev" : "webpack-dev-server"
     
-This little line will later enable you to start the development server from your command line by typing `npm run dev` in your project directory.
+These lines will later enable you to start the development server from your command line by typing `npm run dev` in your project directory, and to create a permanent build of your project by typing `npm run build`.
 
 Now, your package.json should look like this:
 
@@ -42,8 +43,9 @@ Now, your package.json should look like this:
       "description": "",
       "main": "index.js",
       "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "dev" : "webpack-dev-server"
+        "build": "webpack",
+        "dev" : "webpack-dev-server",
+        "test": "echo \"Error: no test specified\" && exit 1"        
       },
       "keywords": [],
       "author": "",
