@@ -65,7 +65,7 @@ Let's take a closer look at what we're downloading here:
 - *node-sass*: A module to compile SASS code (enhanced CSS) to browser-readable "classic" CSS.
 - *webpack*: A build tool that compiles different types of source files into something that can be run by the browser.
 - *css-loader*, *sass-loader*, *style-loader*, *ts-loader* and *vue-loader*: These are plug-ins for Webpack that enable Webpack to compile CSS, SCSS/SASS, TypeScript and Vue component source files into a project.
-- *webpack-dev-server*: A small web server that can be launched from the command line and makes your project accessible via http for development purposes. What makes it extremely helopful is that it automatically rebuilds and reloads you app when a source file has changed.
+- *webpack-dev-server*: A small web server that can be launched from the command line and makes your project accessible via http for development purposes. What makes it extremely helpful is that it automatically rebuilds and reloads your app when a source file has changed.
 
 ## Set up Webpack:
 
@@ -290,5 +290,9 @@ Now open the web browser of your choice and navigate to `http://localhost:8080`.
 Note that the dev server works with a temporary build that is not stored on your disk. In order to produce permanent build files for deployment or use with another web server, use the following comand:
 
     npm run build
+
+## Editor/IDE recommendation for Vue.js + TypeScript
+
+A great (perhaps the best?) editor to work on Vue+TypeScript projects is Visual Studio Code with the Vetur plug-in. VS Code is famous for its great TypeScript support, and the Vetur plug-in provides capabilities like auto-complete and refactoring for .vue files (Vue.js single file component definitions). It's not yet as good as it could be (e.g. no auto-complete for TypeScript code in the template section), but definitely a lot better than plain text editing.
 
 
