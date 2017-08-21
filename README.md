@@ -15,7 +15,7 @@ If you want to understand a little more about what's going on here, read on. The
 
 ## Motivation
 
-When I decided to start using Vue.js, it was clear for me from the first moment on that I wanted to use it together with TypeScript. I had used TypeScript for a while and was more than convinced by the amazing increase in productivity that TypeScript provides compared to plain JavaScript. So, I started to look for a tutorial about how to set up the two to work together. I googled for hours and while I found many articles and sample projects on the topic, none of them was fully functional. Sometimes, instructions were written for outdated versions of the involved software packages, sometimes a small but critical step was missing.
+When I decided to start using Vue.js, it was clear for me from the first moment on that I wanted to use it together with TypeScript. I had used TypeScript for a while and was more than convinced by the amazing increase in productivity that TypeScript provides compared to plain JavaScript. So, I started to look for a tutorial about how to set up the two to work together. I googled for hours, and while I found many articles and sample projects on the topic, none of the ones that I tried was fully functional in the way that I wanted. Sometimes, instructions were written for outdated versions of the involved software packages, sometimes a small but critical step was missing.
 
 After many hours of googleing, reading, trial and error, I finally had a working project up and running. I'm sharing this project here with you in the hope to save you these hours if you're in a similar situation.
 
@@ -28,11 +28,12 @@ The instructions and sample code provided here worked on my system as of 2017-08
 
 This command will create a file named 'package.json' in your project folder. package.json is the central configuration and "housekeeping" file of npm, the Node Package Manager. We'll use npm to download and manage all software packages required by this project.
 
-Open your newly created package.json with your text editor and add the following property to the "scripts" section:
+Open your newly created package.json with your text editor and add the following properties to the "scripts" section:
 
+    "build": "webpack",
     "dev" : "webpack-dev-server"
     
-This little line will later enable you to start the development server from your command line by typing `npm run dev` in your project directory.
+These lines will later enable you to start the development server from your command line by typing `npm run dev` in your project directory, and to create a permanent build of your project by typing `npm run build`.
 
 Now, your package.json should look like this:
 
@@ -42,8 +43,9 @@ Now, your package.json should look like this:
       "description": "",
       "main": "index.js",
       "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "dev" : "webpack-dev-server"
+        "build": "webpack",
+        "dev" : "webpack-dev-server",
+        "test": "echo \"Error: no test specified\" && exit 1"        
       },
       "keywords": [],
       "author": "",
@@ -221,24 +223,35 @@ This little file is critical! Without it, you won't be able to `import` Vue comp
 
     <template>
       <div class="app">
-        <p>The message: <input v-model="msg"/></p>
+        <p>The message: <input v-model="message"/></p>
 
         <p>TypeScript and Vue say:</p>
-        <h1>{{msg}}</h1>
+        <h1>{{message}}</h1>
       </div>
     </template>
 
     <script lang="ts">
     import Vue from 'vue'
     import Component from 'vue-class-component'
-
     @Component({
       props: {
+        // Define 'msg' as a prop (read below for details):
         msg: String
       }
     })
     export default class App extends Vue {
-      msg: string;
+      // 'msg' holds the initial message that was passed as a component tag attribute, a so-called 'prop'.
+      // In the '@Component' decorator above, 'msg' is defined as a prop.
+      msg : string;
+      // Members defined as a prop should not be modified by component code, 
+      // so we need to create another member to store the modified message:
+      message: string = "";
+      // mounted() is automatically called when the component is added to the DOM. When this happens,
+      // we copy the initial message from the prop to a "normal" class member so that we can modify it
+      // through the input field:
+      mounted() {
+        this.message = this.msg;
+      }
     }
     </script>
 
