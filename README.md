@@ -15,7 +15,7 @@ If you want to understand a little more about what's going on here, read on. The
 
 ## Motivation
 
-When I decided to start using Vue.js, it was clear for me from the first moment on that I wanted to use it together with TypeScript. I had used TypeScript for a while and was more than convinced by the amazing increase in productivity that TypeScript provides compared to plain JavaScript. So, I started to look for a tutorial about how to set up the two to work together. I googled for hours and while I found many articles and sample projects on the topic, none of them was fully functional. Sometimes, instructions were written for outdated versions of the involved software packages, sometimes a small but critical step was missing.
+When I decided to start using Vue.js, it was clear for me from the first moment on that I wanted to use it together with TypeScript. I had used TypeScript for a while and was more than convinced by the amazing increase in productivity that TypeScript provides compared to plain JavaScript. So, I started to look for a tutorial about how to set up the two to work together. I googled for hours, and while I found many articles and sample projects on the topic, none of them was fully functional in the way that I wanted. Sometimes, instructions were written for outdated versions of the involved software packages, sometimes a small but critical step was missing.
 
 After many hours of googleing, reading, trial and error, I finally had a working project up and running. I'm sharing this project here with you in the hope to save you these hours if you're in a similar situation.
 
