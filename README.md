@@ -54,7 +54,7 @@ Now, your package.json should look like this:
 
 ## Install required packages using npm:
     
-    npm install css-loader node-sass sass-loader ts-loader typescript vue vue-class-component vue-loader vue-template-compiler webpack webpack-dev-server
+    npm install css-loader node-sass sass-loader style-loader ts-loader typescript vue vue-class-component vue-loader vue-template-compiler webpack webpack-dev-server
     
 Let's take a closer look at what we're downloading here:
 
@@ -64,14 +64,14 @@ Let's take a closer look at what we're downloading here:
 - *vue-template-compiler*: A module to compile Vue.js templates to JavaScript.
 - *node-sass*: A module to compile SASS code (enhanced CSS) to browser-readable "classic" CSS.
 - *webpack*: A build tool that compiles different types of source files into something that can be run by the browser.
-- *css-loader*, *sass-loader*, *ts-loader* and *vue-loader*: These are plug-ins for Webpack that enable Webpack to compile CSS, SCSS/SASS, TypeScript and Vue component source files into a project.
+- *css-loader*, *sass-loader*, *style-loader*, *ts-loader* and *vue-loader*: These are plug-ins for Webpack that enable Webpack to compile CSS, SCSS/SASS, TypeScript and Vue component source files into a project.
 - *webpack-dev-server*: A small web server that can be launched from the command line and makes your project accessible via http for development purposes. What makes it extremely helopful is that it automatically rebuilds and reloads you app when a source file has changed.
 
 ## Set up Webpack:
 
 In your project root directory, create a file named `webpack.config.js` with the following content. This will be your Webpack configuration file:
 
-    var path = require('path')
+        var path = require('path')
     var webpack = require('webpack')
 
     module.exports = {
@@ -81,18 +81,37 @@ In your project root directory, create a file named `webpack.config.js` with the
         publicPath: '/dist/',
         filename: 'build.js'
       },
+
+      /*
+          sass-loader - Transforms Sass to CSS. (Input: Sass, Output: CSS)
+          css-loader - Transforms CSS to a JavaScript module. (Input: CSS, Output: JavaScript)
+          style-loader - Injects the CSS, that is exported by the JavaScript module, into a <style> tag at runtime. (Input: JavaScript, Output: JavaScript).
+
+          // Source: https://stackoverflow.com/questions/43913420/css-loader-vs-style-loader-vs-sass-loader
+      */
+
       module: {
         rules: [
+          // TODO: Is this what we want?
+          /*
+          { 
+            test: /\.css$/, 
+            loader: "style-loader!css-loader" 
+          },
+          */
+
+          {
+            //test: /\.scss$/,
+            test: /\.(css|scss)$/,
+
+            //loaders: ["style-loader", "css-loader", "sass-loader"]
+            loaders: ["style-loader", "css-loader", "sass-loader"]
+          },
+
           {
             test: /\.vue$/,
             loader: 'vue-loader',
             options: {
-
-              loaders: {
-                'scss': 'vue-style-loader!css-loader!sass-loader',
-                'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax',
-              },
-
               esModule: true
             }
           },
@@ -149,7 +168,6 @@ In your project root directory, create a file named `webpack.config.js` with the
         })
       ])
     }
-
 
 ## Set up TypeScript:
 
