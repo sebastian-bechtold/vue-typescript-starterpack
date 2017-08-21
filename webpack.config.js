@@ -8,23 +8,37 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'build.js'
   },
+
+  /*
+      sass-loader - Transforms Sass to CSS. (Input: Sass, Output: CSS)
+      css-loader - Transforms CSS to a JavaScript module. (Input: CSS, Output: JavaScript)
+      style-loader - Injects the CSS, that is exported by the JavaScript module, into a <style> tag at runtime. (Input: JavaScript, Output: JavaScript).
+  
+      // Source: https://stackoverflow.com/questions/43913420/css-loader-vs-style-loader-vs-sass-loader
+  */
+
   module: {
     rules: [
+      // TODO: Is this what we want?
+      /*
+      { 
+        test: /\.css$/, 
+        loader: "style-loader!css-loader" 
+      },
+      */
+
+      {
+        //test: /\.scss$/,
+        test: /\.(css|scss)$/,
+
+        //loaders: ["style-loader", "css-loader", "sass-loader"]
+        loaders: ["style-loader", "css-loader", "sass-loader"]
+      },
+
       {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
-             
-             
-          loaders: {
-            // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
-            // the "scss" and "sass" values for the lang attribute to the right configs here.
-            // other preprocessors should work out of the box, no loader config like this necessary.
-            'scss': 'vue-style-loader!css-loader!sass-loader',
-            'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax',
-          },
-             
-          // other vue-loader options go here
           esModule: true
         }
       },
