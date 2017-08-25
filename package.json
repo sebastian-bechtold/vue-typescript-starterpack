@@ -11,8 +11,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@types/uuid": "^3.4.1",
+  "dependencies": {    
     "css-loader": "^0.28.5",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
