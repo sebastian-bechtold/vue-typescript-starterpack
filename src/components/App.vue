@@ -9,22 +9,15 @@
 </template>
 
 <script lang="ts">
-import { Component, Inject, Model, Prop, Vue, Watch } from 'vue-property-decorator'
+import { Component, Inject, Model, Prop, Vue, Watch } from "vue-property-decorator";
 
-@Component({
-  props: {
-
-    // Define 'msg' as a prop (read below for details):
-    msg: String
-  }
-})
+@Component({})
 export default class App extends Vue {
-
   // 'msg' holds the initial message that was passed as a component tag attribute, a so-called 'prop'.
-  // In the '@Component' decorator above, 'msg' is defined as a prop.
-  msg : string;
+  // The '@Prop()' decorator defines 'msg' as a prop (read below for details):
+  @Prop() msg: string;
 
-  // Members defined as a prop should not be modified by component code, 
+  // Members defined as a prop should not be modified by component code,
   // so we need to create another member to store the modified message:
   message: string = "";
 
@@ -37,9 +30,11 @@ export default class App extends Vue {
 }
 </script>
 
-<style>
-div.app h1 {
-    font-family:sans-serif;
+<style lang="scss">
+div.app {
+  h1 {
+    font-family: sans-serif;
+  }
 }
 </style>
 
