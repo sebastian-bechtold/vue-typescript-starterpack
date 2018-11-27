@@ -1,5 +1,5 @@
 # vue-typescript-starterpack
-A minimal example of integrating TypeScript and Vue.js using Webpack 2
+A minimal example of integrating TypeScript and Vue.js using Webpack 4
 
 
 ## Ultra-quick start if you're super-impatient regarding set-up and configuration chores:
