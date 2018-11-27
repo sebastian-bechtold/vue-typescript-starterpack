@@ -1,6 +1,8 @@
 var path = require('path')
 var webpack = require('webpack')
 
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
+
 module.exports = {
     entry: './src/index.ts',
     output: {
@@ -28,9 +30,11 @@ module.exports = {
             {
                 test: /\.vue$/,
                 loader: 'vue-loader',
+                /*
                 options: {
                     esModule: true
                 }
+                */
             },
             {
                 test: /\.ts$/,
@@ -46,6 +50,10 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+    // make sure to include the plugin!
+    new VueLoaderPlugin()
+    ],
     resolve: {
         extensions: ['.ts', '.js', '.vue'],
         alias: {
@@ -83,6 +91,8 @@ if (process.env.NODE_ENV === 'production') {
 
         new webpack.LoaderOptionsPlugin({
             minimize: true
-        })
+        }),
+        
+        new webpack.VueLoaderPlugin()
     ])
 }
