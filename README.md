@@ -1,9 +1,8 @@
 # vue-typescript-starterpack
 A minimal example of integrating TypeScript and Vue.js using Webpack 4
 
-**LAST UPDATE of NPM packages and configuration to latest versions + successful test of the setup: 2019-01-22**
+**LAST UPDATE of NPM packages and configuration to latest versions + successful test of the setup: 2019-01-22.**
 
-## "Disclaimer":
 Please note that parts of the following documentation are outdated (how else could it be in crazy JS land...). However, the code and configuration was found compile and run fine the last time on the date mentioned above.
 
 ## Ultra-quick start if you're super-impatient regarding set-up and configuration chores:
